@@ -1,0 +1,26 @@
+body {
+    color: white;
+}
+
+.wrapper-content {
+    margin: 30 auto;
+    padding: 0;
+}
+
+.logo {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#prg {
+    color: #66fcf1;
+    font-weight: bold;
+}
+
+span#prg {
+    text-decoration: underline;
+}
+
+p,span,b,u,i {
+    font-size: 18px;
+}
