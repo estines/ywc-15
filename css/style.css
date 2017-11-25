@@ -1,16 +1,37 @@
+html {
+    background-size: 100%;
+    background-repeat: repeat;
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     color: white;
     background-color: rgba(0,0,0,0);
+    background-repeat: repeat;
+    background-size: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 .wrapper-content {
+    width: 75%;
     margin: 30 auto;
-    padding: 0;
+    padding: 0 20;
 }
 
 .logo {
     text-align: center;
     vertical-align: middle;
+}
+
+.topic {
+    text-align: center;
+}
+
+h1#topic {
+    font-size: 28px;
+    text-align: center;
 }
 
 #prg {
@@ -22,6 +43,32 @@ span#prg {
     text-decoration: underline;
 }
 
+p {
+    margin: 5px 0px;
+    padding: 0px;
+}
+
 p,span,b,u,i {
-    font-size: 18px;
+    font-size: 17px;
+}
+
+h2{
+    font-size: 22px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+h2,h3 {
+    color: #66fcf1;
+    font-weight: bold;
+}
+
+#content {
+    margin: 10px 0;
+}
+
+td {
+    color: white;
 }

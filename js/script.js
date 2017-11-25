@@ -1,3 +1,26 @@
+// --- Classify Major's interview ---
+function ClassifyMajor(data){
+    for (i in data){
+        if (data[i]["major"] == "content"){
+             dataget_content[content_count] = data[i];
+            content_count += 1;
+         }
+          if (data[i]["major"] == "design"){
+            dataget_design[design_count] =  data[i];
+            design_count += 1;
+        }
+        if (data[i]["major"] == "marketing"){
+            dataget_marketing[marketing_count] = data[i];
+            marketing_count += 1;
+        }
+        if (data[i]["major"] == "programming"){
+            dataget_programming[programming_count] = data[i];
+            programming_count += 1;
+        }
+    }
+}
+
+
 // --- Sorting interviewRef ---
 function SortingRef(data){
     var swap;
@@ -29,35 +52,16 @@ $(document).ready(function(){
                 },
             success: 
                 function(dataget){
-                    // classify interview major
-                    for (i in dataget){
-                        if (dataget[i]["major"] == "content"){
-                            dataget_content[content_count] = dataget[i];
-                            content_count += 1;
-                        }
-                        if (dataget[i]["major"] == "design"){
-                            dataget_design[design_count] = dataget[i];
-                            design_count += 1;
-                        }
-                        if (dataget[i]["major"] == "marketing"){
-                            dataget_marketing[marketing_count] = dataget[i];
-                            marketing_count += 1;
-                        }
-                        if (dataget[i]["major"] == "programming"){
-                            dataget_programming[programming_count] = dataget[i];
-                            programming_count += 1;
-                        }
-                    }
+                   // --- Sending dataget to classify major ---
+                    ClassifyMajor(dataget);
+                    
                     // --- Send Array to sort major ---
                     SortingRef(dataget_content);
                     SortingRef(dataget_design);
                     SortingRef(dataget_marketing);
                     SortingRef(dataget_programming);
-                    
-                    for (i in dataget_content){
-                        
-                    }
-                }   
+                }
         });
     
+    $("#interview-list").append("<tr><td>test</td><td>hello</td><td>I'm</td><td>Teemo</td></tr>");
 });
