@@ -43,6 +43,7 @@ var dataget_content=[], dataget_design=[], dataget_marketing=[], dataget_program
 var content_count = 0, design_count = 0, marketing_count = 0, programming_count = 0;
 
 $(document).ready(function(){
+
     // --- Get data from json api ---
     $.ajax({
             url: "https://ywc15.ywc.in.th/api/interview",
@@ -60,8 +61,14 @@ $(document).ready(function(){
                     SortingRef(dataget_design);
                     SortingRef(dataget_marketing);
                     SortingRef(dataget_programming);
+                    
+                    console.log(dataget_content);
                 }
+            //console.log(dataget_content);
         });
     
-    $("#interview-list").append("<tr><td>test</td><td>hello</td><td>I'm</td><td>Teemo</td></tr>");
+    setTimeout(function(){},5000);
+    
+    console.log(dataget_content);
+    $("#itv-list").append("<tr><td>test</td><td>hello</td><td>I'm</td><td>Teemo</td></tr>");
 });
